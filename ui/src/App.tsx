@@ -1,12 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Board from "./components/board";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline w-screen mt-64 text-center">
-      Hello world!
-    </h1>
+    <div className="w-screen mt-32 flex justify-center">
+      <Board />
+    </div>
   );
 }
 
