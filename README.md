@@ -1,2 +1,5 @@
 # martian-chess
-Martian Chess
+Martian Chess app
+
+Make separate directories for each service
+
