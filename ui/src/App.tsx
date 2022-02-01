@@ -2,7 +2,7 @@ import Board from "./components/board";
 
 function App() {
   return (
-    <div className="w-screen mt-32 flex justify-center">
+    <div className="w-auto h-max flex items-center justify-center">
       <Board />
     </div>
   );
