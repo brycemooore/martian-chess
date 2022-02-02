@@ -16,5 +16,8 @@ export class Board implements BoardState {
         this.playerAPieces = []
         this.playerBPieces = []
     }
-    static BoardState 
+
+    static generateBoard(fen: string) {
+        
+    }
 }
