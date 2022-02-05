@@ -1,12 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Board from "./components/board";
 
 function App() {
+  const [rotationIdx, setRotationIdx] = useState<number>(0);
+  const rotationPositions = ['rotate-0', 'rotate-90', 'rotate-180', '-rotate-90']
+
+  const rotateHandler = () => {
+    if (rotationIdx < 4) {
+      setRotationIdx(current => current + 1);
+    } else {
+      setRotationIdx(0)
+    }
+  }
+
   return (
-    <h1 className="text-3xl font-bold underline w-screen mt-64 text-center">
-      Hello world!
-    </h1>
+    <div className="w-auto h-max flex items-center justify-center">
+      <Board rotation={rotationPositions[rotationIdx]} />
+      <button className="absolute" onClick={rotateHandler}>Rotate</button>
+    </div>
   );
 }
 
