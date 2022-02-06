@@ -1,4 +1,4 @@
 export enum PlayerZone {
-    A,
-    B
+    A = 'A',
+    B = 'B'
 }
