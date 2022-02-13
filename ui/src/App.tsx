@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Board from "./components/board";
+import { processFenString, TWO_PLAYER_STARTER_FEN } from "./utils";
 
 function App() {
 	const [rotationIdx, setRotationIdx] = useState<number>(0);
@@ -17,6 +18,10 @@ function App() {
 			setRotationIdx(0);
 		}
 	};
+
+  	useEffect(() => {
+    	processFenString(TWO_PLAYER_STARTER_FEN)
+  	}, [])
 
 	return (
 		<div className="w-auto sm:h-max h-screen flex items-center justify-center">
