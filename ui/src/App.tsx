@@ -19,7 +19,7 @@ function App() {
 	};
 
 	return (
-		<div className="w-auto h-screen flex items-center justify-center">
+		<div className="w-auto sm:h-max h-screen flex items-center justify-center">
 			<Board rotation={rotationPositions[rotationIdx]} />
 			<button className="absolute" onClick={rotateHandler}>
 				Rotate
